@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:aop="http://www.springframework.org/schema/aop" 
+xmlns:mvc="http://www.springframework.org/schema/mvc" 
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:tx="http://www.springframework.org/schema/tx" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+http://www.springframework.org/schema/mvc 
+http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd 
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-4.0.xsd 
+">
+	<!-- 掃描controller package的class -->
+	<context:component-scan base-package="controller"/>
+	<context:component-scan base-package="dao"/>
+	<context:component-scan base-package="services"/>
+	
+	<!-- 啟用annotation -->
+	<mvc:annotation-driven/>
+	<!-- path:表示網址 view-name:表示對應路徑 -->
+	<mvc:view-controller path="/" view-name="redirect:/admin/login"/>
+	
+	<!-- 靜態資源 -->
+	<mvc:resources location="/resources/" mapping="/resources/**"/> 
+	
+	<!-- 配置autowired bean -->
+	<bean id="adminDao" class="dao.AdminDao"></bean>
+	<bean id="adminService" class="services.AdminServiceImpl"></bean>
+	<bean id="memberDao" class="dao.MemberDao"></bean>
+	<bean id="memberService" class="services.MemberServiceImpl"></bean>
+	<bean id="novelsDao" class="dao.NovelsDao"></bean>
+	<bean id="novelService" class="services.NovelServiceImpl"></bean>
+	<bean id="authorDao" class="dao.AuthorDao"></bean>
+	<bean id="classificationDao" class="dao.ClassificationDao"></bean>
+	<bean id="chapterDao" class="dao.ChapterDao"></bean>
+	<bean id="favoritesDao" class="dao.FavoritesDao"></bean>
+	<bean id="slideshowDao" class="dao.SlideshowDao"></bean>
+	
+	
+	
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/jsp/"
+		p:suffix=".jsp"/> 
+
+		<!-- 配置捕獲的exception，透過<prop key="key:捕獲的exception class">值:跳轉的jsp頁面</prop>，用以取代在每個controller都要配置自定義的exception方法 -->	
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="model.DaoException">error</prop>
+			</props>
+		</property>
+	</bean>		
+    
+	<!-- 配置檔案上傳設定，maxUploadSize限制上傳檔案大小 -->	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="500000"></property>
+	</bean>	
+	
+
+	
+	<!--靜態文件配置-->
+    <bean id="freeMarkerConfigurer"
+        class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/ftl/"></property>
+        <property name="defaultEncoding" value="utf-8" />
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_update_delay">0</prop>
+                <prop key="locale">zh_CN</prop>
+                <prop key="datetime_format">yyyy-MM-dd</prop>
+                <prop key="date_format">yyyy-MM-dd</prop>
+                <prop key="number_format">#.##</prop>
+            </props>
+        </property>
+    </bean>
+	<!--套用.ftl版面設計 生成.html-->
+    <bean id="freeMarkerViewResolver"
+        class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="cache" value="false" />
+        <property name="prefix" value="" />
+        <property name="suffix" value=".ftl" />
+        <property name="contentType" value="text/html;charset=UTF-8" />
+        <property name="allowSessionOverride" value="true" />
+        <property name="allowRequestOverride" value="true" />
+        <property name="exposeSpringMacroHelpers" value="true" />
+        <property name="exposeRequestAttributes" value="true" />
+        <property name="exposeSessionAttributes" value="true" />
+        <property name="requestContextAttribute" value="request" />
+    </bean>
+</beans>
+
+

@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+	/*card-body內的文字排版*/
+		.txt {
+			width: 100%;
+			padding: 5px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+
+		}
+		.card-text{
+			-webkit-line-clamp: 3;
+		}
+
+		.txt .a-heart-a-more {
+			line-height: 1.5em;
+			display: flex;
+			margin-top: auto;
+		}
+
+		.txt .a-more {
+			line-height: 1.5em;
+			border: 1px solid #ccc;
+			padding: 0 1em;
+			align-self: flex-end;
+			text-decoration: none;
+			border-radius: 200px;
+			margin-top: auto;
+			color: #aaa;
+			background-color: #000;
+			margin-left: auto;
+		}
+
+		.txt .a-more:hover {
+			background-color: #aaa;
+			color: #fff;
+			border: 1px solid #ccc;
+		}
+		/*card-body內的文字排版end*/
+
+		/*愛心*/
+		/*原始樣式*/
+		.like {
+			font-size: 22px;
+			color: #fff;
+			-webkit-text-stroke: 1px #000;
+			cursor: pointer;
+		}
+
+		/*點擊後出現樣式*/
+		.like-checked {
+			color: #f00;
+			-webkit-text-stroke: 1px #f00;
+		}
+		/*愛心 end*/
+
+		/*推薦榜單*/
+		.title-new-novels {
+			display: flex;
+			align-items: center;
+			border-bottom: 2px solid #000;
+			margin-bottom: 20px;
+		}
+
+		.title-new-novels h2 {
+			padding: 0 10px;
+			display: inline-block;
+			width: 20%;
+			min-width: 200px;
+
+		}
+
+		.title-new-novels h5 {
+			width: 80%;
+			text-align: right;
+		}
+
+		.title-new-novels h5 a {
+			text-decoration: none;
+		}
+
+		.title-new-novels h5 a:hover {
+			font-weight: bold;
+			color: rgb(23, 105, 41);
+		}
+		/*推薦榜單end*/
+
+		/*熱門標籤*/
+		.item-hot {
+			margin: 10px;
+			border: 1px solid #aaa;
+			padding: 10px;
+			position: relative;
+		}
+
+		.item-hot img {
+			width: 100%;
+		}
+
+		.item-hot .tab-hot {
+			background-color: #f00;
+			color: #fff;
+			padding: 6px 10px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		/*熱門標籤end*/
+
+		/*麵包屑*/
+		.path {
+			background-color: #ccc;
+		}
+
+		/*transparent透明*/
+		.path .breadcrumb {
+			padding: 10px 0;
+			background-color: transparent;
+		}
+		/*麵包屑end*/
+
+		/*分頁*/
+		.pagination {
+			justify-content: center;
+		}
+		/*分頁end*/
+
+		/*幻燈片*/
+		.carousel-item {
+			transform: translateX(0px);
+			transition: transform 0.5s ease, opacity 0.5s ease-out;
+		}
+		
+		/*小說封面圖*/
+		.cover{
+		
+			height:120px;
+		}

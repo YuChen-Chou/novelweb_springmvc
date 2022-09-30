@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+html,body{
+	height: 100%;
+}
+body{
+	background: url("../../img/logo/bkimg.jpg") no-repeat center center / cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.login{
+	width: 600px;
+	height: 500px;
+	background-color: rgba(0,0,0,.5);
+	border-radius: 10px;
+	border: 10px solid #fff;
+	box-shadow: 0 0 60px #000;
+	backdrop-filter: blur(5px);/*模糊*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form{
+	font-family: 'Noto Sana TC', sans-serif;
+	color: #fff;
+	width: 400px;
+}
+.form h2{
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #fff;
+	
+}
+.form .group{
+	margin-bottom: 20px;
+}
+.form label{
+	line-height: 2;
+	font-family: 'Noto Sana TC', sans-serif;
+}
+.form input{
+	width: 100%;
+	border: 1px solid #aaa;
+	line-height: 3;
+	border-radius: 5px;
+}
+.form .btn-group{
+	font-size: 0;
+	margin-top: 50px;
+	/*justify-content: center;*//*內容置中*/
+}
+.form .btn{
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #6ab4fe; 
+	width: 190px;
+	padding: 10px 0;
+	color: #fff;
+	font-family: 'Noto Sana TC', sans-serif;
+}
+.form .btn + .btn{
+	margin-left: 20px;
+}
+.err-msg{
+	margin-left: 10px;
+	color: #c01;
+	background-color: #fff;
+}

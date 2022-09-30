@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+		.container {
+			width: 100%;
+			display: flex;
+
+		}
+
+		.content-page {
+			margin-top: 20px;
+			width: 50%;
+			min-width: 300px;
+		}
+
+		.tab-content {
+			border-left: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+
+		}
+
+		.form-login {
+			width: 80%;
+			margin: 0px auto;
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+
+		.form-login .btn {
+			margin-top: 10px;
+		}
+
+		/*A+B:表示與A相鄰的B才會被套用此設定*/
+		.form-login .btn+.btn {
+			float: right;
+		}
+
+		.form-login .btn:hover {
+			color: #fff;
+			background-color: #025727;
+		}
+
+		.form-login .form-control {
+
+			outline: none;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+
+		}
+
+		.form-login .form-control:focus {
+			border-color: #025727;
+
+		}
+
+		.radio-check-group {
+			border: 1px solid #ccc;
+			padding-top: 5px;
+			padding-left: 20px;
+			min-width: 180px;
+			border-radius: 3px;
+		}
+
+		.form-login .form-control {
+			min-width: 160px;
+		}

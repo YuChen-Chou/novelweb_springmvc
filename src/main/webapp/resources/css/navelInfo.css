@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/*已完結的樣式*/
+.container .tab-status-end {
+	background-color: #f00;
+	color: #fff;
+	padding: 6px 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*連載中的樣式*/
+.container .tab-status-default {
+	background-color: #6279dd;
+	color: #fff;
+	padding: 6px 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+
+/*章節列表*/
+.novel-list-name {
+	border: 1px solid #000;
+	padding: 10px;
+	background-color: #0c311cfb;
+	color: #fff;
+	text-align: center;
+}
+/*每一個章節item*/
+.novel-list-item .col {
+	border: 1px solid #000;
+	background-color: #336e4cfb;
+	color: #fff;
+	text-align: center;
+}
+/*封面圖*/
+.card img {
+	height: 100%;
+	object-fit: cover;
+}
+
+/*收藏圖標*/
+.btn-add-myfavorites {
+	border: none;
+	/*background-color: #0c311cfb;*/
+	background-color: #f8bd4ffb;
+	color: #fff;
+	margin-left: 10px;
+	font-size: 14px;
+	border-radius: 4px;
+	padding: 0 4px;
+	text-decoration: none;
+}
+
+.btn-add-myfavorites:hover {
+	color: #f8bd4ffb;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+/*小說介紹*/
+.novel-list-info {
+	background-color: #0c311cfb;
+	color: #fff;
+	
+}
+
+.novel-list-info small {
+	color: #ccc;
+}
+
+.novel-img {
+	background-color: #0c311cfb;
+	max-height: 224px;
+	min-height: 224px;
+}
+
+.card-text {
+	-webkit-line-clamp: 3;
+}
+/*小說介紹end*/
+
+/*超連結*/
+.a-chapter {
+	color: #fff;
+	text-decoration: none;
+}
+
+.a-chapter:hover {
+	color: #fff;
+	text-decoration: none;
+}
+

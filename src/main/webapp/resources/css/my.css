@@ -1,0 +1,198 @@
+	* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.navbar {
+		z-index: 1;
+	}
+
+	/*login-tooltiptext*/
+	.login-tooltip {
+		position: relative;
+		display: inline-block;
+		border-bottom: 1px dotted black;
+
+	}
+
+	.login-tooltiptext {
+		visibility: hidden;
+		width: 120px;
+		background-color: rgb(87, 83, 83);
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;
+		position: absolute;
+		z-index: 1;
+		top: 150%;
+		left: 50%;
+		margin-left: -60px;
+	}
+
+	.login-tooltip .login-tooltiptext::after {
+		content: "";
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent transparent rgb(87, 83, 83) transparent;
+	}
+
+	.login-tooltip:hover .login-tooltiptext {
+		visibility: visible;
+	}
+
+	/* login-tooltiptext end*/
+
+	.card-text {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		white-space: normal;
+	}
+
+		/*導航的顏色*/
+		.nav-shadow {
+			background-color: #276F6F;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+
+		.bg-dark .navbar-nav .nav-link {
+			color: rgb(255, 255, 255);
+		}
+
+		.bg-dark .navbar-brand,
+		.bg-dark .navbar-text {
+			color: rgb(255, 255, 255);
+		}
+
+		.bg-dark .nav-item.active .nav-link,
+		.bg-dark .nav-item:hover .nav-link {
+			color: hsl(133, 69%, 44%);
+		}
+
+		.bg-dark .dropdown-menu {
+			background-color: #2C3232;
+		}
+
+		.bg-dark .dropdown-item {
+			color: #FFFFFF;
+		}
+
+		.bg-dark .dropdown-item:hover {
+			background-color: #057956f6;
+		}
+
+		.dropdown-divider {
+			color: #fff;
+		}
+
+		.login-btn {
+			background-color: transparent;
+			border: none;
+			/*box-shadow: none;
+			outline: none;*/
+		}
+		.login-tooltip{
+			border: none;
+		}
+
+		/*login-dialog*/
+		.login-dialog{
+			
+			min-height: 700px;
+			max-height: 700px;
+		}
+		.login-dialog .container {
+			width: 100%;
+			display: flex;
+
+		}
+
+		.login-dialog .content-page {
+			margin-top: 20px;
+			width: 50%;
+			min-width: 300px;
+		}
+
+		.login-dialog .tab-content {
+			border-left: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+
+		}
+
+		.login-dialog .form-login {
+			width: 80%;
+			margin: 0px auto;
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+
+		.login-dialog .form-login .btn {
+			margin-top: 10px;
+		}
+
+		/*A+B:表示與A相鄰的B才會被套用此設定*/
+		.login-dialog .form-login .btn+.btn {
+			float: right;
+		}
+
+		.login-dialog .form-login .btn:hover {
+			color: #fff;
+			background-color: #025727;
+		}
+
+		.login-dialog .form-login .form-control {
+
+			outline: none;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+
+		}
+
+		.login-dialog .form-login .form-control:focus {
+			border-color: #025727;
+
+		}
+
+		.login-dialog .radio-check-group {
+			border: 1px solid #ccc;
+			padding-top: 5px;
+			padding-left: 20px;
+			min-width: 180px;
+			border-radius: 3px;
+		}
+
+		.login-dialog .form-login .form-control {
+			min-width: 160px;
+		}
+
+		/*login-dialog end*/
+
+		/*導航的顏色end*/
+
+		/*全部區塊的範圍*/
+		.page-container {
+			min-height: 100vh;
+		}
+		/*上半部內容區塊*/
+		.content-wrap {
+			min-height: 90vh;
+		}
+		/*下半部頁腳區塊*/
+		.main-footer {
+			background-color: #000;
+			color: #fff;
+			padding: 20px;
+			height: 60px;
+			/*設定footer本身高度*/
+			margin-top: 10px;
+			/*隨footer高度需做調整*/	
+		}

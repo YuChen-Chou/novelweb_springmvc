@@ -1,0 +1,108 @@
+@charset "UTF-8";
+	input.form-control:focus {
+			border-color: #ccc;
+			outline: none;
+			box-shadow: none;
+		}
+		.add-author{
+			min-width: 250px;
+		}
+
+		.input-group .btn:hover {
+			background-color: #025727;
+		}
+		/*X > Y：表示選取X的子對象Y*/
+		.table > thead > tr > th {
+			background-color: #042c15;
+			
+		}
+		.btn-add-novel{
+			margin-top: 20px;
+			color: #fff;
+			background-color: #000;
+			padding: 5px;
+		}
+		.btn-add-novel:hover {
+			background-color: #025727;
+		}
+
+		/*model:新增小說*/
+		.form-add-novel .btn+.btn {
+			float: right;
+		}
+
+		.form-add-novel .btn:hover {
+			color: #fff;
+			background-color: #025727;
+		}
+		.form-add-novel {
+			
+			width: 80%;
+			margin: 0px auto;
+			padding-top: 30px;
+			padding-bottom: 10px;
+		}
+		input.form-control:focus {
+			border-color: #ccc;
+			outline: none;
+			box-shadow: none;
+		}
+		textarea.form-control{
+			height: 300px;
+			min-height: 300px;
+			max-height: 300px;
+			resize:none;
+		}
+		textarea.form-control:focus {
+			border-color: #ccc;
+			outline: none;
+			box-shadow: none;
+		}
+		/*model:新增小說 end*/
+		
+		/*防止footer跑到上面*/
+		.container{
+			min-height: 70vh;
+		}
+
+		
+		/*提示申請成功的彈窗*/
+		.my-full-screen{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+			background-color: rgba(0,0,0,.5);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		/*串起來寫表示一個div同時套用2個class，中間有空格表示前後層*/
+		.my-full-screen.x {
+			display:none;
+		}
+		.my-full-screen .my-text {
+			width: 90%;
+			max-width: 500px;
+			max-height: 80%;
+			background-color: #fff;
+			padding: 20px;
+			/*position: absolute;*/
+			position: relative;
+		}
+		.my-full-screen .my-btn-close {
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			background-color: #f00;
+			color: #fff;
+			text-decoration: none;
+			top: -15px;
+			right: -15px;
+			border-radius: 50%;
+		}
+		/*提示申請成功的彈窗end*/

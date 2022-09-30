@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+	.table > thead > tr > th {
+		background-color: #042c15;
+	}
+
+/* body {
+	background-image: linear-gradient(90deg, #3d5894, #08c7a5);
+}
+
+.my-table {
+	width: 1200px;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+.my-table table {
+	width: 100%;
+	border: 3px double #666;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.my-table thead {
+	background: #333;
+	color: #fff;
+}
+
+.my-table thead th:first-child {
+	border-radius: 7px 0 0 0;
+}
+
+.my-table thead th:last-child {
+	border-radius: 0 7px 0 0;
+}
+
+.my-table tbody tr:nth-child(even) {
+	background-color: #ffa;
+}
+
+.my-table tfoot td:first-child {
+	border-radius: 0 0 0 7px;
+}
+
+.my-table tfoot td:last-child {
+	border-radius: 0 0 7px 0;
+}
+
+.my-table tfoot td button {
+	font-weight: bold;
+	background-color: #ccc;
+	padding: 5px;
+}
+
+.my-table tfoot td button:hover {
+	background-color: #fff;
+	padding: 5px;
+}
+
+.my-table th {
+	border: 1px solid #666;
+	padding: 6px 10px;
+}
+
+.my-table td {
+	border: 1px solid #666;
+	padding: 6px 6px;
+}
+
+.my-table caption {
+	caption-side: bottom;
+	text-align: right;
+	border: 3px double #fff;
+	border-bottom: 0;
+	width: 50%;
+	margin-left: 25%;
+	border-radius: 10px 10px 0px 0px;
+	background: #333;
+	color: #fff;
+	padding: 10px 0;
+}
+
+.my-find {
+	width: 400px;
+	min-width: 400px;
+	margin: 10px 0 20px 400px;
+	background-color: #333;
+	padding: 10px;
+	border: 3px double #fff;
+	border-radius: 10px;
+	color: #fff;
+	display: flex;
+}
+
+.my-find label {
+	
+}
+
+.my-find .my-find-search {
+	display: flex;
+	margin-left: 10px;
+}
+
+.my-find .my-find-search input, .my-find .my-find-search button {
+	border: none;
+	padding: 5px 10px;
+}
+
+.my-find .my-find-search input:focus, .my-find .my-find-search button:focus
+	{
+	outline: none;
+}
+
+.my-find .my-find-search input {
+	border-radius: 200px 0 0 200px;
+}
+
+.my-find .my-find-search button {
+	border-radius: 0 200px 200px 0;
+}
+
+.my-find .my-find-search span {
+	background-color: #a00;
+}
+
+.err_msg {
+	color: #f00;
+}
+
+.my-main-footer {
+	width: 100%;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	padding: 20px;
+	height: 20px;
+	設定footer本身高度
+	margin-top: 10px;
+	隨footer高度需做調整
+}
+防止footer跑到上面
+.container {
+	min-height: 70vh;
+} */

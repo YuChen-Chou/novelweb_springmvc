@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+	.novel-content{
+			min-height: 70vh;
+		}
+
+
+		.novel-name {
+			display: flex;
+			align-self: center;
+		}
+
+		.chaper-name {
+			text-align: center;
+			background-color: rgb(4, 83, 21);
+		}
+
+		.footer-btn {
+			text-align: center;
+		}
+		.footer-btn button{
+			min-width: 20%;
+			max-width: 30%;
+		}
