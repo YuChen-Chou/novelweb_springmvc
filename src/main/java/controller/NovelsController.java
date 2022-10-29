@@ -187,7 +187,6 @@ public class NovelsController {
 	 */
 	@RequestMapping("search")
 	public String search(@RequestParam("search_string") String searchString, RedirectAttributes attr) {
-
 		System.out.println("搜尋:" + searchString);
 		searchString = searchString.trim();// 移除開頭或結尾的空白
 		attr.addAttribute("searchString", searchString);
