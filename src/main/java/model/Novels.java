@@ -57,8 +57,6 @@ public class Novels {
 	@JoinColumn(name = "status_id")
 	@Cascade({CascadeType.SAVE_UPDATE,CascadeType.MERGE,CascadeType.PERSIST})
 	private Status status=new Status(0,"連載中");
-	
-	
 
 	@ManyToOne
 	@Cascade({CascadeType.SAVE_UPDATE,CascadeType.MERGE,CascadeType.PERSIST})
@@ -82,8 +80,6 @@ public class Novels {
 	public Novels(Integer id) {
 		this.id = id;
 	}
-	
-	
 
 	public Novels(String name, String introduction, Author author, Classification classification) {
 		this.name = name;
@@ -215,9 +211,5 @@ public class Novels {
 	public void setFavorites(List<Favorites> favorites) {
 		this.favorites = favorites;
 	}
-	
-
-
-	
 	
 }

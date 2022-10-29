@@ -2,10 +2,8 @@ package model;
 
 import java.util.List;
 
-//import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -20,7 +18,7 @@ public class Memberclass {
 	@Column(name = "class_id")
 	private int id;
 	private String name;
-	@OneToMany(fetch = FetchType.LAZY,mappedBy = "memberclass")
+	@OneToMany(mappedBy = "memberclass")
 	@Cascade({CascadeType.ALL})
 	private List<Member> members;
 	
@@ -30,7 +28,7 @@ public class Memberclass {
 	public Memberclass(int id) {
 		this.id = id;
 	}
-	public Memberclass(int id, String name) {
+	public Memberclass(int id,String name) {
 		this.id = id;
 		this.name = name;
 	}

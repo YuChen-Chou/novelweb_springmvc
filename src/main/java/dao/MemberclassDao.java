@@ -29,5 +29,5 @@ public class MemberclassDao implements IHibernateDao<Memberclass> {
 	public void delete(Memberclass o) {
 		HibernateDaoImpl.myUpdate(o, DaoStateEnum.DELETE);
 	}
-
+	
 }

@@ -33,8 +33,6 @@ public class MemberServiceImpl implements IMemberService {
 	private FavoritesDao favoritesDao;
 	
 
-
-
 	@Override
 	public Member findById(int id) {
 		if(memberDao.ckeckIdIsExist(id)) 
@@ -159,19 +157,7 @@ public class MemberServiceImpl implements IMemberService {
 	@Override
 	public void addFavorites(Member member, int novelId) {
 		Novels novels=novelsDao.queryId(novelId);
-		Member q_member;
-		//情況1:作者收藏自己的小說
-		if(novels.getAuthor().getMember().getId().equals(member.getId())) {
-			q_member = novels.getAuthor().getMember();
-		}else {
-			//情況2:會員跟作者不同人 收藏小說:
-			q_member = memberDao.queryId(member.getId());
-		}
-		
-		
-		
-		System.out.println("收藏書名:"+novels.getName());
-		Favorites favorites = new Favorites(novels,q_member);
+		Favorites favorites = new Favorites(novels,member);
 		favoritesDao.add(favorites);
 	}
 
@@ -185,8 +171,10 @@ public class MemberServiceImpl implements IMemberService {
 	public List<Favorites> findFavorites(Member member) {
 		return favoritesDao.queryAllByMemberId(member.getId());
 	}
-	
-	
-	
+
+	@Override
+	public boolean checkFavoritesByMember(Member member, int novelId) {
+		return favoritesDao.ckeckNovelIdIsExist(member.getId(), novelId);
+	}
 
 }

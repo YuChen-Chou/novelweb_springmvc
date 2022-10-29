@@ -42,5 +42,20 @@ public class FavoritesDao implements IHibernateDao<Favorites> {
 		List<Favorites> l = HibernateDaoImpl.myQuery(HQL, params, Favorites.class);
 		return l;
 	}
+	
+	/**
+	 * 查詢該小說id是否已經被該登入會員收藏
+	 * @param memberId-會員ID
+	 * @param novelId-小說ID
+	 * @return true:存在，false:不存在
+	 */
+	public boolean ckeckNovelIdIsExist(int memberId, int novelId) {
+		String HQL = "from Favorites where member_id=?1 and novel_Id=?2";
+		String[] params = { memberId+"",  novelId+""};
+		List<Favorites> l = HibernateDaoImpl.myQuery(HQL, params, Favorites.class);
+		if (l.size() > 0)
+			return true;
+		return false;
+	}
 
 }

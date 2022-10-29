@@ -68,9 +68,9 @@ public class Member {
 	private Calendar updatetime;
 	
 	@ManyToOne
-	@Cascade({CascadeType.SAVE_UPDATE})
+	@Cascade({CascadeType.MERGE,CascadeType.SAVE_UPDATE})
 	@JoinColumn(name = "class_id")
-	private Memberclass memberclass=new Memberclass(MemberClassStateEnum.ORDINARYMEMBER.ordinal(), MemberClassStateEnum.ORDINARYMEMBER.getName());//給預設值，若建構式沒有寫此欄位，會自動使用預設值
+	private Memberclass memberclass=new Memberclass(MemberClassStateEnum.ORDINARYMEMBER.ordinal(),MemberClassStateEnum.ORDINARYMEMBER.getName());//給預設值，若建構式沒有寫此欄位，會自動使用預設值
 	
 	//給作者表用的資料
 	@OneToMany(mappedBy = "member")
@@ -90,7 +90,6 @@ public class Member {
 		this.id = id;
 	}
 	
-
 	public Member(String name, String username, String password, String email, String phone, String gender) {
 		this.name = name;
 		this.username = username;

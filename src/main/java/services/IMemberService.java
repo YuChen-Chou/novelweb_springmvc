@@ -110,5 +110,13 @@ public interface IMemberService {
 	 * @return List<Favorites>
 	 */
 	List<Favorites> findFavorites(Member member);
+	
+	/**
+	 * 檢查是否收藏過該小說
+	 * @param member
+	 * @param novelId
+	 * @return true:已經收藏,false:未收藏
+	 */
+	boolean checkFavoritesByMember(Member member,int novelId);
 
 }

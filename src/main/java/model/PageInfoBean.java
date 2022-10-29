@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class PageInfoBean<T> {
-	public final static Integer DEFAULT_PAGE_SIZE=3;//首頁分頁預設pageSize值
+	public final static Integer DEFAULT_PAGE_SIZE=8;//首頁分頁預設pageSize值
 	public final static Integer DEFAULT_CHAPTER_SIZE=1;//章節分類預設pageSize值
 	public final static Integer DEFAULT_NAVIGATE_PAGES=3;//預設首頁導航頁碼數
 	public final static Integer DEFAULT_CHAPTER_NAVIGATE_PAGES=1;//預設章節導航頁碼數

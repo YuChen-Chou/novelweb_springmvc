@@ -38,13 +38,13 @@ public class Favorites {
 
 	// 外鍵小說id
 	@ManyToOne
-	@Cascade({CascadeType.SAVE_UPDATE,CascadeType.MERGE,CascadeType.PERSIST})
+	@Cascade({CascadeType.MERGE})
 	@JoinColumn(name = "novel_id")
 	private Novels novels;
 
 	// 外鍵會員id
 	@ManyToOne
-	@Cascade({CascadeType.SAVE_UPDATE,CascadeType.MERGE,CascadeType.PERSIST})
+	@Cascade({CascadeType.MERGE})
 	@JoinColumn(name = "member_id")
 	private Member member;
 
@@ -59,6 +59,7 @@ public class Favorites {
 		this.novels = novels;
 		this.member = member;
 	}
+	
 
 	public Favorites(Integer id, Novels novels, Member member) {
 		this.id = id;

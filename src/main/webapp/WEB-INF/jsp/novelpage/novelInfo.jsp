@@ -31,9 +31,16 @@
 							<div class="card-body novel-list-info">
 								<h5 class="card-title">${novel.name}
 								<c:if test="${sessionScope.member!=null}">
-								<a href="${pageContext.request.contextPath}/member/addFavorites/${novel.id}" class="btn-add-myfavorites" type="button">
-									收藏
-								</a>
+									<c:choose>
+										<c:when test="${memberFav!=null}">
+											<button class="btn-myfavorites">已收藏</button>
+										</c:when>
+										<c:otherwise>
+											<a href="${pageContext.request.contextPath}/member/addFavorites/${novel.id}" class="btn-add-myfavorites" type="button">
+												收藏
+											</a>
+										</c:otherwise>
+									</c:choose>
 								</c:if>
 								</h5>
 								<c:set var="update_date"><fmt:formatDate value="${novel.updatetime.time}" 

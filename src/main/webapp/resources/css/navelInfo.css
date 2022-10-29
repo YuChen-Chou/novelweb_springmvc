@@ -59,6 +59,17 @@
 	background-color: #fff;
 	text-decoration: none;
 }
+/*已收藏圖標*/
+.btn-myfavorites {
+	border: none;
+	background-color: #a8bdfffb;
+	color: #fff;
+	margin-left: 10px;
+	font-size: 14px;
+	border-radius: 4px;
+	padding: 0 4px;
+	text-decoration: none;
+}
 
 /*小說介紹*/
 .novel-list-info {

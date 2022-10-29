@@ -19,15 +19,20 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import exception.DaoException;
 import model.Chapter;
 import model.Classification;
+import model.Member;
 import model.Novels;
 import model.PageInfoBean;
 import model.Slideshow;
 import myutil.FileUploadPath;
+import services.IMemberService;
 import services.INovelService;
 
 @Controller
 @RequestMapping("novels")
 public class NovelsController {
+	
+	@Autowired
+	private IMemberService memberService;
 
 	@Autowired
 	private INovelService novelService;
@@ -125,7 +130,7 @@ public class NovelsController {
 	 */
 	@RequestMapping("novelinfo/{novelid}")
 	public String NovelInfo(@PathVariable("novelid") String novelid, Model model,
-			@RequestParam(value = "pageNum", required = false, defaultValue = "1") Integer pageNum) {
+			@RequestParam(value = "pageNum", required = false, defaultValue = "1") Integer pageNum,HttpSession session) {
 
 		System.out.println("novelid：" + novelid);
 		// 查找該小說id的全部章節
@@ -134,6 +139,16 @@ public class NovelsController {
 
 		List<Chapter> chapters = novelService.findAllChapterByNovel(novel);
 		model.addAttribute("chapters", chapters);
+		
+		// 如果登入會員，查找該會員是否已添加此書為收藏
+		if(session.getAttribute("member")!=null) {
+			Member member = (Member)session.getAttribute("member");
+			if(memberService.checkFavoritesByMember(member, Integer.valueOf(novelid))) {
+				//如果已存在
+				model.addAttribute("memberFav","已收藏");
+			}
+			
+		}
 
 		return "novelpage/novelInfo";
 	}
